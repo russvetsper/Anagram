@@ -24,6 +24,11 @@ namespace AnagramList.Objects
        Anagram myAnagram = new Anagram("bread","beard");
        Assert.Equal(true,myAnagram.isAnagram());
      }
-
+     [Fact]
+     public void Test4_ComplexInput_ReturnFalse()
+     {
+       Anagram myAnagram = new Anagram("bread","orange");
+       Assert.Equal(false,myAnagram.isAnagram());
+     }
   }
 }
