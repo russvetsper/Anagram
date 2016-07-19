@@ -9,6 +9,7 @@
 | Behavior        | Input One Example   | Input Two Example |Output Example  |
 | ------------- |:-------------:| -----:|-----:|
 | Simple Input  | a | a | True |
+| Simple Input  | b | c | False |
 | complex Input | bread | beard | True |
 | complex Input  | head | AdHE | True |
 | InValid Input  | g0al | ga0l | False |
