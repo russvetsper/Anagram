@@ -54,15 +54,6 @@ namespace AnagramList.Objects
        string ourString = string.Join("",ourArray);
        string userString= string.Join("",userArray);
 
-       Console.WriteLine(ourString.Length);
-       Console.WriteLine(userString.Length);
-       Console.WriteLine(ourString);
-
-       Console.WriteLine(ourString.Contains(userString));
-       Console.WriteLine(userString.Contains(ourString));
-       Console.WriteLine(userArray);
-
-
        if(ourString.Length>=userString.Length)
        {
          for (int i =0; i<userString.Length; i++)
