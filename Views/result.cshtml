@@ -5,12 +5,17 @@
     <title>Pong!</title>
   </head>
   <body>
-    <ul>
-    @for(int i =1; i< Model.GetNum();i++)
-      {
-        <li>@Model.PingPongGenerator(i)</li>
-      }
-      </ul>
+<h1>Your First Input Word : @Model.GetOurWord()</h1>
 
+<h1>Your Second Input Word : @Model.GetUserWord()</h1>
+
+@if(Model.isAnagram())
+{
+  <h1>Your words are anagram</h1>
+}else
+{
+  <h1>Your words are not anagram</h1>
+
+}
   </body>
 </html>
