@@ -28,7 +28,7 @@ namespace AnagramList.Objects
      public void Test4_ComplexInput_False()
      {
        Anagram myAnagram = new Anagram("bread","orange");
-       Assert.Equal(true,myAnagram.isAnagram());
+       Assert.Equal(false,myAnagram.isAnagram());
      }
      [Fact]
      public void test5_PartialMatch_True()

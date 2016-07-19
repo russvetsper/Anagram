@@ -41,6 +41,10 @@ namespace AnagramList.Objects
      }
      public bool isAnagram()
      {
+       if(this.isContainsNum())
+       {
+          return false;
+       }else{
        bool result = false;
        string ourStringWord=this.GetOurWord().ToLower();
        string userStringWord=this.GetUserWord().ToLower();
@@ -58,9 +62,13 @@ namespace AnagramList.Objects
        {
          for (int i =0; i<userString.Length; i++)
          {
-           if(ourString.Contains(userString[i])&&!this.isContainsNum())
+           if(ourString.Contains(userString[i]))
            {
              result= true;
+           }
+           else
+           {
+             result=false;
              break;
            }
          }
@@ -69,15 +77,21 @@ namespace AnagramList.Objects
        {
          for (int i =0; i<ourString.Length; i++)
          {
-           if(userString.Contains(ourString[i])&&!this.isContainsNum())
+           if(userString.Contains(ourString[i]))
            {
              result= true;
+           }
+           else
+           {
+             result=false;
              break;
+
            }
          }
        }
        return result;
     }
+  }
 
     }
   }
