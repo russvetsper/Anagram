@@ -41,22 +41,52 @@ namespace AnagramList.Objects
      }
      public bool isAnagram()
      {
+       bool result = false;
+       string ourStringWord=this.GetOurWord().ToLower();
+       string userStringWord=this.GetUserWord().ToLower();
 
-       char[] ourArray=this.GetOurWord().ToCharArray();
-       char[] userArray=this.GetUserWord().ToCharArray();
+       char[] ourArray=ourStringWord.ToCharArray();
+       char[] userArray=userStringWord.ToCharArray();
 
        Array.Sort(ourArray);
        Array.Sort(userArray);
        //change to string before comparing
        string ourString = string.Join("",ourArray);
        string userString= string.Join("",userArray);
-       if(ourString==userString)
+
+       Console.WriteLine(ourString.Length);
+       Console.WriteLine(userString.Length);
+       Console.WriteLine(ourString);
+
+       Console.WriteLine(ourString.Contains(userString));
+       Console.WriteLine(userString.Contains(ourString));
+       Console.WriteLine(userArray);
+
+
+       if(ourString.Length>=userString.Length)
        {
-         return true;
-       }else
+         for (int i =0; i<userString.Length; i++)
+         {
+           if(ourString.Contains(userString[i])&&!this.isContainsNum())
+           {
+             result= true;
+             break;
+           }
+         }
+         //ourWord=Path , userWord=Pat.
+       }else if(ourString.Length<userString.Length)
        {
-       return false;
-      }
+         for (int i =0; i<ourString.Length; i++)
+         {
+           if(userString.Contains(ourString[i])&&!this.isContainsNum())
+           {
+             result= true;
+             break;
+           }
+         }
+       }
+       return result;
     }
+
     }
   }

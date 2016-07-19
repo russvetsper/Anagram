@@ -14,6 +14,13 @@
 | complex Input  | head | AdHE | True |
 | InValid Input  | g0al | ga0l | False |
 | InValid Input  | 0 | 0 | False |
+| partial Match  | bread| orange| true |
+| partial Match  | Pat| Path| true |
+| partial Match  | at| Path| true |
+| partial Match  | a| Path| true |
+| Case Insencetive  | Pat| pat| true |
+
+
 
 * [Click](https://github.com/yichiang/Anagram.git) to see view the coding.
 * Alternatively, clone our Github Repository and open the index.html file.
