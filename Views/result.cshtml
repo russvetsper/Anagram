@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pong!</title>
+  </head>
+  <body>
+    <ul>
+    @for(int i =1; i< Model.GetNum();i++)
+      {
+        <li>@Model.PingPongGenerator(i)</li>
+      }
+      </ul>
+
+  </body>
+</html>
