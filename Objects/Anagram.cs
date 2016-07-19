@@ -1,4 +1,5 @@
 using System;
+using  System.Linq;
 namespace AnagramList.Objects
 {
   public class Anagram
@@ -28,16 +29,22 @@ namespace AnagramList.Objects
      {
        _userWord = neword;
      }
-
+     public bool isContainsNum(){
+       if(this.GetOurWord().Any(c => char.IsDigit(c))||this.GetUserWord().Any(c => char.IsDigit(c)))
+       {
+         return true;
+       }
+       else
+       {
+         return false;
+       }
+     }
      public bool isAnagram()
      {
-       Console.WriteLine(this.GetOurWord().GetType());
-       Console.WriteLine(this.GetUserWord().GetType());
 
        char[] ourArray=this.GetOurWord().ToCharArray();
        char[] userArray=this.GetUserWord().ToCharArray();
-       Console.WriteLine(ourArray);
-       Console.WriteLine(userArray);
+
        Array.Sort(ourArray);
        Array.Sort(userArray);
        //change to string before comparing

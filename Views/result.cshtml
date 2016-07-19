@@ -9,13 +9,19 @@
 
 <h1>Your Second Input Word : @Model.GetUserWord()</h1>
 
-@if(Model.isAnagram())
+@if(Model.isAnagram()&&!Model.isContainsNum())
 {
   <h1>Your words are anagram</h1>
-}else
+}else if(Model.isContainsNum())
 {
-  <h1>Your words are not anagram</h1>
+  <h1>You type in Number and it is invalid</h1>
 
 }
+else
+{
+  <h1>Your words are not anagram</h1>
+}
+
+
   </body>
 </html>
